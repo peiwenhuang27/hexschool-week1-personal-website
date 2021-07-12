@@ -47,11 +47,20 @@ table {
 
 /* ENDOF CSS RESET */
 
+body {
+    font-family: Noto Sans TC, sans-serif;
+}
+
+img {
+    display: block;
+}
+
 .container {
-    width: 980px;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.inverse +  .container {
+    max-width: 996px;
 }
 
 .inner-box {
@@ -59,16 +68,15 @@ table {
 }
 
 .title {
-    border-bottom: 0.8px solid #000;
+    border-bottom: 1px solid #000;
     padding-bottom: 8px;
 }
-#first-title {
+.first-title {
     text-align: left;
     font: normal normal normal 24px/30px Noto Sans TC;
-    color: #000000;
     margin-right: 5px;
 }
-#second-title {
+.second-title {
     text-align: left;
     font: normal normal 500 18px/20px Roboto;
     color: #A00404;
@@ -79,13 +87,12 @@ table {
     padding-bottom: 16px;
     border-bottom: 0.8px solid #fff;
 }
-.title-inverse #first-title {
-    text-align: left;
+.title-inverse .first-title {
     font: normal normal normal 24px/30px Noto Sans TC;
     color: #fff;
     margin-right: 5px;
 }
-.title-inverse #second-title {
+.title-inverse .second-title {
     text-align: left;
     font: normal normal 500 18px/20px Roboto;
     color: #fff;
@@ -102,22 +109,21 @@ table {
     align-items: center;
 }
 
-.text p {
+.text-inverse {
+    color: #fff;
+}
+
+.text ul {
     margin-top: 10px;
-    text-align: left;
     font: normal normal 300 16px/30px Noto Sans TC;
-    color: #000000;
 }
 
 .name {
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #000;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-.name h1 {
     text-align: left;
     font: normal normal normal 40px/45px Roboto;
-    color: #000000;
 }
 
 .portrait img {
@@ -130,17 +136,17 @@ table {
     margin-top: 20px;
     border-left: 0.8px solid #fff;
 }
-.skill-box ul {
-    margin-left: 10px;
+.skill-box {
+    padding-left: 10px;
 }
 .skill-box li {
-    color: #fff;
+    /* color: #fff; */
     font: normal normal 300 14px/24px Roboto;
 }
 
 .experience-box {
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 24px;
     border-left: 1px solid #96A9C4;
 }
 .experience-box ul {
@@ -157,19 +163,16 @@ table {
     height: auto;
 }
 .experience-box .li-text {
-    width: 50%;
+    max-width: 500px;
     font: normal normal 300 12px/20px Noto Sans TC;
 }
 
 .contact-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     margin-top: 20px;
 }
 .contact-list li {
     font: normal normal 300 14px/24px Roboto;
-    color: #fff;
 }
 .contact-list li a {
     text-decoration: none;
